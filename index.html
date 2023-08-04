@@ -4,54 +4,22 @@
 
 <head>
 
-    <script >
-        !(function () {
-          let e = document.createElement("script"),
-            t = document.head || document.getElementsByTagName("head")[0];
-            
-          (e.src =
-            // "/Users/santoshdahal/Desktop/Projects/webchat-plugin/lib/index.js"),
-
-            "https://cdn.jsdelivr.net/gh/llmchatbot/sdk@9c3d4a9167cf649374feb364c863c6385cbc344f/index.js"),
-            (e.async = !0),
-            (e.onload = () => {
-              window.WebChat.default(
-                {
-                  customData: { widgetId: '66b0c029-f91c-4fd0-92e0-6bcdb4f2a565' },
-                  initPayload: "hello",
-                  socketUrl: "wss://goluhospital.diyo.ai/ws/webchat/",
-                  title: 'LLM Billgates Foundation',
-                  subtitle: 'Safe Sexual and Reproductive LLMs',
-                  showMessageDate: false,
-                  inputTextFieldHint: "Write your message ...",
-                  embedded: false,
-                  showCloseButton: false,
-                  showFullScreenButton: false,
-                  isChatOpen: true,
-                  fullScreenMode: true,
-                  params: {
-                    storage: "local"
-                  },
-                  displayUnreadCount:true,
-                  assistBackgoundColor:'red',
-                  assistTextColor:'white',
-                  userBackgroundColor:'green',
-                  mainColor:'#A94064',
-                  profileAvatar:"https://cdn-icons-png.flaticon.com/512/4616/4616334.png",
-                  // openLauncherImage:"https://i.ibb.co/FhgRzBV/340767167-106343172425216-8901994321881831034-n-removebg-preview-1.png"
-                },
-                null
-              );
-            }),
-
-            e.charset = "UTF-8"; // Add charset="UTF-8"
-
-          t.insertBefore(e, t.firstChild);
-
-          // Add meta charset="UTF-8"
-
-        })();
-      </script>
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://llm.diyochat.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.diyochatSDK.run({
+            websiteToken: 'dmyUVah37vJHrYkkQrUgMVBm',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
 </head>
 
 <body>
